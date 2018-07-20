@@ -1,7 +1,5 @@
 import sqlite3
-from multiprocessing.pool import Pool
 from queue import Queue
-
 from sqlite3 import Connection, Cursor
 from typing import Callable
 

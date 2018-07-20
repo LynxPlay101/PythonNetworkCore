@@ -1,5 +1,3 @@
-from uuid import UUID
-
 from player.profiles.MinecraftProfile import MinecraftProfile
 from player.profiles.PlayerProfileSnapshot import PlayerProfileSnapshot
 from player.profiles.roleplay.BranchProfile import BranchProfile

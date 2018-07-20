@@ -1,4 +1,3 @@
-from typing import Callable, Tuple
 from uuid import UUID
 
 from player.profiles.NetworkPlayer import NetworkPlayer
@@ -22,6 +21,3 @@ class Player:
         return "Player{" + self.uuid.__str__() + " as " + self.last_known_name + " from " + self.last_known_ip \
                + "(" + (self.network_player is None and "" or str(self.network_player)) + ")" + "}"
 
-
-def get_player_mapper() -> Callable[[Tuple], Player]:
-    return lambda m: Player(UUID(bytes=m[0]), m[1], m[2])

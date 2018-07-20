@@ -1,4 +1,3 @@
-import ctypes
 import json
 from uuid import UUID
 
@@ -12,7 +11,6 @@ from player.dao.SelectedProfileDataDao import SelectedProfileDataDao
 from player.dao.roleplay.BranchProfileDao import HogwartsProfileDao, MordoniaProfileDao
 from player.dao.roleplay.BranchProfileDaoFactory import BranchProfileDaoFactory
 from sql.SQLProvider import *
-
 from sql.SQLScriptFile import SQLScriptFile
 
 sql_provider = SQLProvider(MySQLProvider(1, config={

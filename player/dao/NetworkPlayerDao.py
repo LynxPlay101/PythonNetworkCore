@@ -51,6 +51,6 @@ class NetworkPlayerDao(GenericDao[NetworkPlayer]):
         player_profile: PlayerProfile = self.profile_dao.from_snapshot(
             get_selected_snapshot(selected_profile_data, snapshots, self.server_branch))
 
-        return NetworkPlayer(t[1], t[2], t[3], t[4], selected_profile_data, player_profile, snapshots)
+        return NetworkPlayer(t[1], t[2], t[3], t[4], player_profile, snapshots)
 
     pass

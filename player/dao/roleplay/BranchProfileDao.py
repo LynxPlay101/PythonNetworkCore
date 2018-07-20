@@ -14,7 +14,7 @@ class BranchProfileDao(GenericDao[BranchProfile]):
         return super().lookup(key)
 
 
-class HogwartsProfileDao(BranchProfileDao, GenericDao[HogwartsProfile]):
+class HogwartsProfileDao(BranchProfileDao):
 
     def __init__(self, provider: SQLProvider):
         super().__init__(provider, "hogwarts_profile", [["profile_id", "%s"]], lambda c: self.build_profile(c))
@@ -29,7 +29,7 @@ class HogwartsProfileDao(BranchProfileDao, GenericDao[HogwartsProfile]):
     pass
 
 
-class MordoniaProfileDao(BranchProfileDao, GenericDao[MordoniaProfile]):
+class MordoniaProfileDao(BranchProfileDao):
 
     def __init__(self, provider: SQLProvider):
         super().__init__(provider, "mordonia_profile", [["profile_id", "%s"]], lambda c: self.build_profile(c))

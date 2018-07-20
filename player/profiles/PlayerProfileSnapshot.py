@@ -1,5 +1,3 @@
-from uuid import UUID
-
 import util.ToStringUtil as sU
 
 

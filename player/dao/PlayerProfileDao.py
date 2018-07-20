@@ -1,10 +1,9 @@
 from typing import Tuple
-from uuid import UUID
 
-from player.profiles.PlayerProfile import PlayerProfile
-from player.profiles.PlayerProfileSnapshot import PlayerProfileSnapshot
 from player.dao.MinecraftProfileDao import MinecraftProfileDao
 from player.dao.roleplay.BranchProfileDaoFactory import BranchProfileDaoFactory
+from player.profiles.PlayerProfile import PlayerProfile
+from player.profiles.PlayerProfileSnapshot import PlayerProfileSnapshot
 from sql.GenericDao import GenericDao
 from sql.SQLProvider import SQLProvider
 
