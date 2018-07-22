@@ -9,21 +9,6 @@ def to_string(o: object) -> str:
     if isinstance(o, str):
         return '"' + o + '"'
 
-    try:
-        values = vars(o)
-        s = "{"
-        multiple = False
-
-        for x in values:
-            if multiple:
-                s += " , "
-
-            s += '"' + x + '"' + " : " + to_string(o.__getattribute__(x))
-            multiple = True
-        return s + "}"
-    except TypeError:
-        pass
-
     if isinstance(o, Mapping):
         s = "{"
         multiple = False
@@ -45,5 +30,19 @@ def to_string(o: object) -> str:
             s += to_string(x)
             multiple = True
         return s + "]"
-    return to_string(str(o))
+
+    try:
+        values = vars(o)
+        s = "{"
+        multiple = False
+
+        for x in values:
+            if multiple:
+                s += " , "
+
+            s += '"' + x + '"' + " : " + to_string(o.__getattribute__(x))
+            multiple = True
+        return s + "}"
+    except TypeError:
+        return to_string(str(o))
     pass
